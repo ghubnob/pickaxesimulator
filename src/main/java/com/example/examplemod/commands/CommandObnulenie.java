@@ -47,6 +47,6 @@ public class CommandObnulenie extends CommandBase {
 
     @Override
     public int getRequiredPermissionLevel() {
-        return 0; // любой игрок может вызвать
+        return 0; // all players
     }
 }
