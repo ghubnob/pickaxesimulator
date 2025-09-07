@@ -1,0 +1,27 @@
+npcBlockSeller1 = 34.5  67  -40.5
+npcBackpackSeller1 = 9.5  67  -40.5
+npcTeleport1-2 = 21.5 67 -41.5
+
+npcBlockSeller2 = 34.5  67  -72.5
+npcBackpackSeller2 = 9.5  67  -72.5
+npcTeleport2-1 = 21.5 67 -45.5
+npcTeleport2-3 = 21.5 67 -73.5
+
+npcBlockSeller3 = 34.5  67  -104.5
+npcBackpackSeller3 = 9.5  67  -104.5
+npcTeleport3-2 = 21.5 67 -77.5
+npcTeleport3-4 = 21.5 67 -105.5
+
+npcBlockSeller4 = 34.5  67  -135.5
+npcBackpackSeller4 = 9.5  67  -135.5
+npcTeleport4-3 = 21.5 67 -109.5
+npcTeleport4-5 = 21.5 67 -136.5
+
+npcTeleport5-4 = 21.5 67 -140.5
+
+
+playerSpawnLoc1 = ...
+playerSpawnLoc2 = 21.5  67 -46.5
+playerSpawnLoc3 = 21.5  67 -78.5
+playerSpawnLoc4 = 21.5  67 -109.5
+playerSpawnLoc5 = 21.5  67 -141.5
