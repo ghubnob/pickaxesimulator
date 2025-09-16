@@ -16,13 +16,14 @@ public class ItemCustomTreasure extends ItemArrow {
 
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
-        return TextFormatting.AQUA + "Diamond sun";
+        return TextFormatting.GOLD + "Drill enchantment";
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        String descStr = "§4Treasure! sell it";
-        descStr = descStr.substring(1, descStr.length());
+        String descStr = TextFormatting.DARK_RED + "Drill book.";
+        tooltip.add("");
+        tooltip.add(descStr);
         super.addInformation(stack,worldIn,tooltip,flagIn);
     }
 }

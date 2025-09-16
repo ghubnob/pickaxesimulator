@@ -2,7 +2,6 @@ package com.example.examplemod.modblocks;
 
 import com.example.examplemod.ModItems;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockEnderChest;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +13,7 @@ import net.minecraft.world.World;
 
 public class BlockTreasureChest extends Block {
     public BlockTreasureChest() {
-        super(Material.ROCK); // материал для прочности
+        super(Material.PORTAL); // материал для прочности
         setRegistryName("treasure_chest");
         setUnlocalizedName("treasure_chest");
         setHardness(2.0F);

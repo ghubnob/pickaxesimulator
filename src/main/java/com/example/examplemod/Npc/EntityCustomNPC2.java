@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 public class EntityCustomNPC2 extends EntityCreature {
@@ -34,28 +35,31 @@ public class EntityCustomNPC2 extends EntityCreature {
             for (int i=0; i<player.inventory.getSizeInventory(); i++) {
                 ItemStack currItem = player.inventory.getStackInSlot(i);
                 if (currItem.getItem() == Item.getItemFromBlock(Blocks.STONE)) {
-                    invMoney += currItem.getCount()*5*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    invMoney += currItem.getCount()*8*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
                     player.inventory.deleteStack(currItem);
                 } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.COBBLESTONE)) {
-                    invMoney += (int)(currItem.getCount()*8.5*Math.max(player.getEntityData().getInteger("boostersMoney"), 1));
+                    invMoney += (int)(currItem.getCount()*12*Math.max(player.getEntityData().getInteger("boostersMoney"), 1));
                     player.inventory.deleteStack(currItem);
                 } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.SANDSTONE)) {
-                    invMoney += currItem.getCount()*15*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
-                    player.inventory.deleteStack(currItem);
-                } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.END_STONE)) {
-                    invMoney += currItem.getCount()*60*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
-                    player.inventory.deleteStack(currItem);
-                } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.OBSIDIAN)) {
-                    invMoney += currItem.getCount()*150*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
-                    player.inventory.deleteStack(currItem);
-                } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.NETHERRACK)) {
                     invMoney += currItem.getCount()*25*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
                     player.inventory.deleteStack(currItem);
+                } /*else if (currItem.getItem() == Item.getItemFromBlock(Blocks.END_STONE)) {
+                    invMoney += currItem.getCount()*60*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    player.inventory.deleteStack(currItem);*/
+                else if (currItem.getItem() == Item.getItemFromBlock(Blocks.OBSIDIAN)) {
+                    invMoney += currItem.getCount()*350*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    player.inventory.deleteStack(currItem);
+                } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.NETHERRACK)) {
+                    invMoney += currItem.getCount()*55*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    player.inventory.deleteStack(currItem);
                 } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.NETHER_BRICK)) {
-                    invMoney += currItem.getCount()*50*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    invMoney += currItem.getCount()*87*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
                     player.inventory.deleteStack(currItem);
                 } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.RED_NETHER_BRICK)) {
-                    invMoney += currItem.getCount()*75*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    invMoney += currItem.getCount()*135*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
+                    player.inventory.deleteStack(currItem);
+                } else if (currItem.getItem() == Item.getItemFromBlock(Blocks.CONCRETE)) {
+                    invMoney += currItem.getCount()*675*Math.max(player.getEntityData().getInteger("boostersMoney"), 1);
                     player.inventory.deleteStack(currItem);
                 }
             }
@@ -95,7 +99,7 @@ public class EntityCustomNPC2 extends EntityCreature {
 
     @Override
     public String getCustomNameTag() {
-        return "§9Sell inventory".substring(1);
+        return TextFormatting.DARK_AQUA+"Sell inventory";
     }
 
     @Override

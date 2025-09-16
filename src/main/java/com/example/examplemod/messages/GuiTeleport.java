@@ -55,7 +55,7 @@ public class GuiTeleport extends GuiContainer {
         this.renderHoveredToolTip(mouseX, mouseY);
         if (levelButton.isMouseOver()) {
             List<String> tooltip = new ArrayList<>();
-            int p = ClientData.playerLevel;
+            int p = ClientData.playerLocation;
             tooltip.add(TextFormatting.AQUA + "Teleport to the next location");
             tooltip.add("");
             switch(p) {

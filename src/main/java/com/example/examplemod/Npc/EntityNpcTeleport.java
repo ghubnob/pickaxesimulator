@@ -10,6 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 public class EntityNpcTeleport extends EntityCreature {
@@ -64,7 +65,7 @@ public class EntityNpcTeleport extends EntityCreature {
 
     @Override
     public String getCustomNameTag() {
-        return "§bTeleport".substring(1);
+        return TextFormatting.AQUA+"Teleport".substring(1);
     }
 
     @Override

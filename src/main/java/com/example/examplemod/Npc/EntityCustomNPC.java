@@ -8,6 +8,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 public class EntityCustomNPC extends EntityCreature {
@@ -67,7 +68,7 @@ public class EntityCustomNPC extends EntityCreature {
 
     @Override
     public String getCustomNameTag() {
-        return "§2Sell backpack".substring(1);
+        return TextFormatting.DARK_RED+"Sell backpack";
     }
 
     @Override

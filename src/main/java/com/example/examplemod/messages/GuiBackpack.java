@@ -36,6 +36,7 @@ public class GuiBackpack extends GuiContainer {
         this.pickaxeButton = new GuiButton(1, centerX+27, centerY+10, 80, 20, "Pickaxe");
         this.buttonList.add(pickaxeButton);
         pickaxeButton.enabled = ClientData.pickaxeLevel != 15;
+        upgradeButton.enabled = ClientData.backpackLimit != 250000;
     }
 
     @Override
@@ -67,20 +68,20 @@ public class GuiBackpack extends GuiContainer {
             tooltip.add(TextFormatting.AQUA + "upgrade your pickaxe here");
             int upgradeprice = 0;
             switch (p) {
-                case 1: upgradeprice = 250;
-                case 2: upgradeprice = 850;
-                case 3: upgradeprice = 1800;
-                case 4: upgradeprice = 5700;
-                case 5: upgradeprice = 9400;
-                case 6: upgradeprice = 24000;
-                case 7: upgradeprice = 52000;
-                case 8: upgradeprice = 86000;
-                case 9: upgradeprice = 115000;
-                case 10: upgradeprice = 168000;
-                case 11: upgradeprice = 245000;
-                case 12: upgradeprice = 380000;
-                case 13: upgradeprice = 542000;
-                case 14: upgradeprice = 1000000;
+                case 1: { upgradeprice = 250; break; }
+                case 2: { upgradeprice = 850; break; }
+                case 3: { upgradeprice = 1800; break; }
+                case 4: { upgradeprice = 5700; break; }
+                case 5: { upgradeprice = 9400; break; }
+                case 6: { upgradeprice = 24000; break; }
+                case 7: { upgradeprice = 52000; break; }
+                case 8: { upgradeprice = 86000; break; }
+                case 9: { upgradeprice = 115000; break; }
+                case 10: { upgradeprice = 168000; break; }
+                case 11: { upgradeprice = 245000; break; }
+                case 12: { upgradeprice = 380000; break; }
+                case 13: { upgradeprice = 542000; break; }
+                case 14: { upgradeprice = 1000000; break; }
             }
             if (p<15) tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(upgradeprice) + "$");
             else tooltip.add(TextFormatting.LIGHT_PURPLE + "You have maximum level of pickaxe");
@@ -89,20 +90,20 @@ public class GuiBackpack extends GuiContainer {
         if (upgradeButton.isMouseOver()) {
             List<String> tooltip = new ArrayList<>();
             int p = ClientData.bll;
-            tooltip.add(TextFormatting.AQUA + "upgrade your backpack capability here");
+            tooltip.add(TextFormatting.AQUA + "upgrade your backpack capacity here");
             int upgradeprice = 0;
             switch(p) {
-                case 0: upgradeprice = 5;
-                case 1: upgradeprice = 150;
-                case 2: upgradeprice = 800;
-                case 3: upgradeprice = 3500;
-                case 4: upgradeprice = 9000;
-                case 5: upgradeprice = 20000;
-                case 6: upgradeprice = 45000;
-                case 7: upgradeprice = 85000;
-                case 8: upgradeprice = 130000;
-                case 9: upgradeprice = 250000;
-                case 10: upgradeprice = 500000;
+                case 0: { upgradeprice = 5; break; }
+                case 1: { upgradeprice = 150; break; }
+                case 2: { upgradeprice = 800; break; }
+                case 3: { upgradeprice = 3500; break; }
+                case 4: { upgradeprice = 9000; break; }
+                case 5: { upgradeprice = 20000; break; }
+                case 6: { upgradeprice = 45000; break; }
+                case 7: { upgradeprice = 85000; break; }
+                case 8: { upgradeprice = 130000; break; }
+                case 9: { upgradeprice = 250000; break; }
+                case 10: { upgradeprice = 500000; break; }
             }
             if (p<11) tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(upgradeprice) + "$");
             else tooltip.add(TextFormatting.LIGHT_PURPLE + "can't upgrade backpack more");

@@ -30,11 +30,11 @@ public class ItemCustomPickaxe extends ItemPickaxe {
     public float getDestroySpeed(ItemStack stack, IBlockState block) {
         switch(getLevel(stack)) {
             case 1: return 1.f;
-            case 2: return 2.f;
-            case 3: return 4.f;
-            case 4: return 8.f;
-            case 5: return 16.f;
-            case 6: return 32.f;
+            case 2: return 3.5f;
+            case 3: return 7.f;
+            case 4: return 12.f;
+            case 5: return 20.f;
+            case 6: return 34.f;
             case 7: return 64.f;
             case 8: return 128.f;
             case 9: return 256.f;

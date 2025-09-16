@@ -42,6 +42,6 @@ public class ModItems {
             });
 
         //ModelLoader.setCustomModelResourceLocation(CUSTOM_PICKAXE,0,new ModelResourceLocation("minecraft:iron_pickaxe", "inventory"));
-        ModelLoader.setCustomModelResourceLocation(CUSTOM_TREASURE,0,new ModelResourceLocation("minecraft:diamond", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(CUSTOM_TREASURE,0,new ModelResourceLocation("minecraft:enchanted_book", "inventory"));
     }
 }

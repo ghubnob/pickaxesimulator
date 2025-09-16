@@ -10,14 +10,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderTeleportNpc extends RenderLiving<EntityNpcTeleport> {
-    private static final ResourceLocation TEX2 = new ResourceLocation("minecraft:textures/entity/enderman/enderman.png");
+    private static final ResourceLocation TEX3 = new ResourceLocation("minecraft:textures/entity/villager/villager.png");
 
     public RenderTeleportNpc(RenderManager manager) {
-        super(manager, new ModelEnderman(0.0f), 0.5f);
+        super(manager, new ModelVillager(0.0f), 0.5f);
     }
 
     @Override
     protected ResourceLocation getEntityTexture(EntityNpcTeleport entity) {
-        return TEX2;
+        return TEX3;
     }
 }

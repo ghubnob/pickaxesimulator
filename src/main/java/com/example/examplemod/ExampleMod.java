@@ -2,6 +2,7 @@ package com.example.examplemod;
 
 import com.example.examplemod.Npc.*;
 import com.example.examplemod.commands.CommandObnulenie;
+import com.example.examplemod.commands.SpawnCommand;
 import com.example.examplemod.keys.CommonProxy;
 import com.example.examplemod.keys.KeyEvent;
 import com.example.examplemod.messages.NetworkHandler;
@@ -101,5 +102,6 @@ public class ExampleMod
     @Mod.EventHandler
     public void serverLoad(FMLServerStartingEvent event) {
         event.registerServerCommand(new CommandObnulenie());
+        event.registerServerCommand(new SpawnCommand());
     }
 }

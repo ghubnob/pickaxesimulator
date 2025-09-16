@@ -30,7 +30,7 @@ public class TeleportGuiButtonClicked implements IMessage {
             int playerLocation = player.getEntityData().getInteger("playerLocation");
             player.getServerWorld().addScheduledTask(() -> {
                 switch (playerLocation) {
-                    case 1: { if (moneyAmount >= 5000 && player.getEntityData().getInteger("bought2Level") != 1) {
+                    case 1: { if (moneyAmount >= 5000 && player.getEntityData().getInteger("bought2Level") != 1 && ClientData.npcTeleportClicked == -41) {
                         player.setPositionAndUpdate(21.5, 67, -46.5);
                         player.getEntityData().setInteger("moneyAmount", moneyAmount - 5000);
                         ClientData.moneyAmount = moneyAmount - 5000;
@@ -40,7 +40,7 @@ public class TeleportGuiButtonClicked implements IMessage {
                     }
                     else if (player.getEntityData().getInteger("bought2Level") == 1) { player.setPositionAndUpdate(21.5, 67, -46.5); player.getEntityData().setInteger("playerLocation", 2); ClientData.playerLocation = 2; }  break; }
 
-                    case 2: { if (moneyAmount >= 20000 && player.getEntityData().getInteger("bought3Level") != 1) {
+                    case 2: { if (moneyAmount >= 20000 && player.getEntityData().getInteger("bought3Level") != 1 && ClientData.npcTeleportClicked == -73) {
                         player.setPositionAndUpdate(21.5, 67, -78.5);
                         player.getEntityData().setInteger("moneyAmount", moneyAmount - 20000);
                         ClientData.moneyAmount = moneyAmount-20000;
@@ -50,7 +50,7 @@ public class TeleportGuiButtonClicked implements IMessage {
                     }  /*nazad*/ else if (ClientData.npcTeleportClicked == -45) { player.setPositionAndUpdate(21.5, 67, -40.5); player.getEntityData().setInteger("playerLocation", 1); ClientData.playerLocation = 1; }
                     else if (player.getEntityData().getInteger("bought3Level") == 1 && ClientData.npcTeleportClicked == -73) { player.setPositionAndUpdate(21.5, 67, -78.5); player.getEntityData().setInteger("playerLocation", 3); ClientData.playerLocation = 3; }  break; }
 
-                    case 3: { if (moneyAmount >= 55000 && player.getEntityData().getInteger("bought4Level") != 1) {
+                    case 3: { if (moneyAmount >= 55000 && player.getEntityData().getInteger("bought4Level") != 1 && ClientData.npcTeleportClicked == -105) {
                         player.setPositionAndUpdate(21.5, 67, -110.5);
                         player.getEntityData().setInteger("moneyAmount", moneyAmount - 55000);
                         ClientData.moneyAmount = moneyAmount-55000;
@@ -60,7 +60,7 @@ public class TeleportGuiButtonClicked implements IMessage {
                     }  /*nazad*/ else if (ClientData.npcTeleportClicked == -77) { player.setPositionAndUpdate(21.5, 67, -72.5); player.getEntityData().setInteger("playerLocation", 2); ClientData.playerLocation = 2;  }
                     else if (player.getEntityData().getInteger("bought4Level") == 1 && ClientData.npcTeleportClicked == -105) { player.setPositionAndUpdate(21.5, 67, -110.5); player.getEntityData().setInteger("playerLocation", 4); ClientData.playerLocation = 4; }  break; }
 
-                    case 4: { if (moneyAmount >= 90000 && player.getEntityData().getInteger("bought5Level") != 1) {
+                    case 4: { if (moneyAmount >= 90000 && player.getEntityData().getInteger("bought5Level") != 1 && ClientData.npcTeleportClicked == -136) {
                         player.setPositionAndUpdate(21.5, 67, -141.5);
                         player.getEntityData().setInteger("moneyAmount", moneyAmount - 90000);
                         ClientData.moneyAmount = moneyAmount-90000;

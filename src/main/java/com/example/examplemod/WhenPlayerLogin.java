@@ -24,12 +24,12 @@ public class WhenPlayerLogin {
         if (!world.isRemote) {
             // other inf
             if (!player.inventory.hasItemStack(new ItemStack(ModItems.CUSTOM_PICKAXE))) player.inventory.addItemStackToInventory(new ItemStack(ModItems.CUSTOM_PICKAXE));
-            else ClientData.pickaxeLevel = ItemCustomPickaxe.getLevel(player.inventory.getStackInSlot(0));
             ClientData.pickaxeLevel = player.getEntityData().getInteger("pickaxeLevel");
             player.setPositionAndUpdate(21.5, 67, -10.5);
             ClientData.backpackAmount = player.getEntityData().getInteger("backpackAmount");
             ClientData.backpackLimit = player.getEntityData().getInteger("backpackLimit");
             ClientData.moneyAmount = player.getEntityData().getInteger("moneyAmount");
+            ClientData.bll = player.getEntityData().getInteger("backpackLimitLevel");
         }
     }
 }

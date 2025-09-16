@@ -26,12 +26,12 @@ public class CommandObnulenie extends CommandBase {
             player.setPositionAndUpdate(21.5, 67, -10.5);
             player.getEntityData().setInteger("playerLocation", 1);
             ClientData.playerLocation = 1;
-            player.getEntityData().setInteger("moneyAmount", 3000000);
-            ClientData.moneyAmount = 3000000;
+            player.getEntityData().setInteger("moneyAmount", 0);
+            ClientData.moneyAmount = 0;
             player.getEntityData().setInteger("backpackAmount", 0);
             ClientData.backpackAmount = 0;
-            player.getEntityData().setInteger("backpackLimit", 0);
-            ClientData.backpackLimit = 0;
+            player.getEntityData().setInteger("backpackLimit", 5);
+            ClientData.backpackLimit = 5;
             player.getEntityData().setInteger("bought1Level", 0);
             player.getEntityData().setInteger("bought2Level", 0);
             player.getEntityData().setInteger("bought3Level", 0);
