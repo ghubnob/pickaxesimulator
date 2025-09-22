@@ -83,7 +83,7 @@ public class GuiBackpack extends GuiContainer {
                 case 13: { upgradeprice = 542000; break; }
                 case 14: { upgradeprice = 1000000; break; }
             }
-            if (p<15) tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(upgradeprice) + "$");
+            if (p<15) tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" +  Integer.toString(upgradeprice) + "$");
             else tooltip.add(TextFormatting.LIGHT_PURPLE + "You have maximum level of pickaxe");
             this.drawHoveringText(tooltip, mouseX, mouseY);
         }

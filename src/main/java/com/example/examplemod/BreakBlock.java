@@ -58,7 +58,7 @@ public class BreakBlock {
         player.inventory.addItemStackToInventory(blockToInv);
 
         // delete block
-        event.getWorld().setBlockToAir(event.getPos());
+        event.getWorld().destroyBlock(event.getPos(), false);
 
         // respawn blocks
         RespawnHandler.queueBlock(event.getPos(), event.getState(), 400);
@@ -80,15 +80,15 @@ public class BreakBlock {
             // delete drill blocks
             if (true) {
                 if (drillBlock1.getBlock() != Blocks.QUARTZ_BLOCK && drillBlock1.getBlock() != Blocks.STAINED_GLASS)
-                    event.getWorld().setBlockToAir(drillBlock1Pos);
+                    event.getWorld().destroyBlock(drillBlock1Pos, false);
                 if (drillBlock2.getBlock() != Blocks.QUARTZ_BLOCK && drillBlock2.getBlock() != Blocks.STAINED_GLASS)
-                    event.getWorld().setBlockToAir(drillBlock2Pos);
+                    event.getWorld().destroyBlock(drillBlock2Pos, false);
                 if (drillBlock3.getBlock() != Blocks.QUARTZ_BLOCK && drillBlock3.getBlock() != Blocks.STAINED_GLASS)
-                    event.getWorld().setBlockToAir(drillBlock3Pos);
+                    event.getWorld().destroyBlock(drillBlock3Pos, false);
                 if (drillBlock4.getBlock() != Blocks.QUARTZ_BLOCK && drillBlock4.getBlock() != Blocks.STAINED_GLASS)
-                    event.getWorld().setBlockToAir(drillBlock4Pos);
+                    event.getWorld().destroyBlock(drillBlock4Pos, false);
                 if (drillBlock5.getBlock() != Blocks.QUARTZ_BLOCK && drillBlock5.getBlock() != Blocks.STAINED_GLASS)
-                    event.getWorld().setBlockToAir(drillBlock5Pos);
+                    event.getWorld().destroyBlock(drillBlock5Pos, false);
             }
 
             // add drill blocks to inv

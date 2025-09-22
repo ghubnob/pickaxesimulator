@@ -55,15 +55,16 @@ public class GuiTeleport extends GuiContainer {
         this.renderHoveredToolTip(mouseX, mouseY);
         if (levelButton.isMouseOver()) {
             List<String> tooltip = new ArrayList<>();
+
             int p = ClientData.playerLocation;
             tooltip.add(TextFormatting.AQUA + "Teleport to the next location");
             tooltip.add("");
             switch(p) {
-                case 1: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(5000) + "$"); break; }
-                case 2: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(20000) + "$"); break; }
-                case 3: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(55000) + "$"); break; }
-                case 4: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(90000) + "$"); break; }
-                case 5: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + Integer.toString(150000) + "$"); break; }
+                case 1: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + "5.000$"); break; }
+                case 2: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + "20.000$"); break; }
+                case 3: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + "55.000$"); break; }
+                case 4: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + "90.000$"); break; }
+                case 5: { tooltip.add(TextFormatting.GOLD + Integer.toString(ClientData.moneyAmount) + "$/" + "150.000$"); break; }
             }
             this.drawHoveringText(tooltip, mouseX, mouseY);
         }
